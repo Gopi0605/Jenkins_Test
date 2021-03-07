@@ -1,5 +1,5 @@
     pipeline {
-        agent {label 'denvorgov'}
+        agent {label 'denvergov'}
         
 
         stages {
