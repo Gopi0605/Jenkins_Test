@@ -2,16 +2,12 @@
         agent any
 
         stages {
-            stage('Hello') {
+            stage('Docker') {
                 steps {
-                    echo 'Hello Worlds'
-                    echo 'building here'
+                 #git branch: 'main', credentialsId: 'github(gopi)', url: 'https://github.com/Gopi0605/Jenkins_Test.git'
+                 sh "sudo docker version"
                 }
+
             }
-    stage('Test'){
-        steps{
-            echo 'Testing Testing hare'
-        }
-    }
         }
     }
