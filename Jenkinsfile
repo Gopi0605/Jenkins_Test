@@ -4,7 +4,8 @@
         stages {
             stage('Docker') {
                 steps {
-                 sh "sudo docker run -itd -p 8089:80 --name nginx-pipe nginx:latest"
+                 sh "sudo docker build -t nginx:pipe ."
+                 sh "sudo docker run -itd --name another-nginx nginx:pipe"
                 }
 
             }
